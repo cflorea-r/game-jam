@@ -7,6 +7,7 @@ public class PlayerControl : MonoBehaviour
 
     public string horizontalCtrl = "Horizontal_P1";
     public string verticalCtrl = "Vertical_P1";
+    public string fireButton = "Fire1_P1";
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,11 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        // If the fire button is pressed
+        if (Input.GetButtonDown(fireButton))
+        {
+            print("Vomit or clean");
+        }
     }
 
     private void FixedUpdate()
