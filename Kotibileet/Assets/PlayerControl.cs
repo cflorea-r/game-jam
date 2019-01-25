@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
+
+    public string horizontalCtrl = "Horizontal_P1";
+    public string verticalCtrl = "Vertical_P1";
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+
+    private void FixedUpdate()
+    {
+        // Cache the horizontal input
+        float h = Input.GetAxis(horizontalCtrl);
+        // Cache the vertical input
+        float v = Input.GetAxis(verticalCtrl);
     }
 }
