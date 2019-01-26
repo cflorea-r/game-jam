@@ -27,7 +27,14 @@ public class PlayerControl : MonoBehaviour
         if (Input.GetButtonDown(fireButton))
         {
             //print("Vomit or clean");
-            GetComponent<VomitScript>().puke(playerNumber);
+            if(playerNumber == 1)
+            {
+                VacuumScript.vacuuming = true;
+            }
+            else
+            {
+                GetComponent<VomitScript>().puke(playerNumber);
+            }
         }
     }
 
