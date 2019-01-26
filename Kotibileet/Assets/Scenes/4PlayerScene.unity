@@ -269,6 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab9c96ecc69d5b74290a0238ae66319a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerNumber: 1
   horizontalCtrl: Horizontal_P1
   verticalCtrl: Vertical_P1
   fireButton: Fire1_P1
@@ -472,6 +473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab9c96ecc69d5b74290a0238ae66319a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerNumber: 4
   horizontalCtrl: Horizontal_P4
   verticalCtrl: Vertical_P4
   fireButton: Fire1_P4
@@ -632,6 +634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab9c96ecc69d5b74290a0238ae66319a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerNumber: 2
   horizontalCtrl: Horizontal_P2
   verticalCtrl: Vertical_P2
   fireButton: Fire1_P2
@@ -953,6 +956,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab9c96ecc69d5b74290a0238ae66319a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerNumber: 3
   horizontalCtrl: Horizontal_P3
   verticalCtrl: Vertical_P3
   fireButton: Fire1_P3
