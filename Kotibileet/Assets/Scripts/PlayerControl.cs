@@ -53,6 +53,9 @@ public class PlayerControl : MonoBehaviour
             VacuumScript.vacuuming = false;
         }
         */
+
+        if (transform.position.x > 15 || transform.position.y > 15 || transform.position.y < -15 || transform.position.x < -15)
+            transform.position = new Vector3(0, 1, -1);
     }
 
     private void FixedUpdate()
