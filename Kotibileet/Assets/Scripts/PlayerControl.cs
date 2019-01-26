@@ -21,7 +21,7 @@ public class PlayerControl : MonoBehaviour
         // If the fire button is pressed
         if (Input.GetButtonDown(fireButton))
         {
-            print("Vomit or clean");
+            //print("Vomit or clean");
             GetComponent<VomitScript>().puke();
         }
     }
@@ -32,5 +32,6 @@ public class PlayerControl : MonoBehaviour
         float h = Input.GetAxis(horizontalCtrl);
         // Cache the vertical input
         float v = Input.GetAxis(verticalCtrl);
+        GetComponent<VomitScript>().Move(h, v);
     }
 }
