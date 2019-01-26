@@ -31,6 +31,8 @@ public class VomitProjectileScript : MonoBehaviour
                 stain.GetComponent<SpriteRenderer>().color = new Color(0.73f, 0.6f, 0.2f, 1.0f);
                 break;
         }
+        stain.GetComponent<VacuumScript>().setOwner(owner);
+        
         scoreScript.AddScore(owner);
 
         scoreScript.printScores();

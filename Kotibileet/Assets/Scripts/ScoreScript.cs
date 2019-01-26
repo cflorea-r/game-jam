@@ -48,6 +48,25 @@ public class ScoreScript : MonoBehaviour
         }
     }
 
+    public void ReduceScore(int playerNumber)
+    {
+        switch (playerNumber)
+        {
+            case 1:
+                player1Score--;
+                break;
+            case 2:
+                player2Score--;
+                break;
+            case 3:
+                player3Score--;
+                break;
+            case 4:
+                player4Score--;
+                break;
+        }
+    }
+
     public void printScores()
     {
         Debug.Log("player1score: " + player1Score);
