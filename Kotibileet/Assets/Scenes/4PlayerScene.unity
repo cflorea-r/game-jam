@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 757966484}
   - component: {fileID: 757966483}
   - component: {fileID: 757966482}
+  - component: {fileID: 757966487}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -256,6 +257,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
+--- !u!114 &757966487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757966481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab9c96ecc69d5b74290a0238ae66319a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontalCtrl: Horizontal_P1
+  verticalCtrl: Vertical_P1
+  fireButton: Fire1_P1
 --- !u!1 &1045253403
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,6 +328,7 @@ GameObject:
   - component: {fileID: 1434742800}
   - component: {fileID: 1434742799}
   - component: {fileID: 1434742798}
+  - component: {fileID: 1434742803}
   m_Layer: 0
   m_Name: Player (3)
   m_TagString: Untagged
@@ -443,6 +460,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
+--- !u!114 &1434742803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434742797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab9c96ecc69d5b74290a0238ae66319a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontalCtrl: Horizontal_P4
+  verticalCtrl: Vertical_P4
+  fireButton: Fire1_P4
 --- !u!1 &1499313047
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,6 +488,7 @@ GameObject:
   - component: {fileID: 1499313050}
   - component: {fileID: 1499313049}
   - component: {fileID: 1499313048}
+  - component: {fileID: 1499313053}
   m_Layer: 0
   m_Name: Player (1)
   m_TagString: Untagged
@@ -587,6 +620,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
+--- !u!114 &1499313053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499313047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab9c96ecc69d5b74290a0238ae66319a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontalCtrl: Horizontal_P2
+  verticalCtrl: Vertical_P2
+  fireButton: Fire1_P2
 --- !u!1 &1517684387
 GameObject:
   m_ObjectHideFlags: 0
@@ -761,6 +809,7 @@ GameObject:
   - component: {fileID: 1836082188}
   - component: {fileID: 1836082187}
   - component: {fileID: 1836082186}
+  - component: {fileID: 1836082191}
   m_Layer: 0
   m_Name: Player (2)
   m_TagString: Untagged
@@ -892,3 +941,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
+--- !u!114 &1836082191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836082185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab9c96ecc69d5b74290a0238ae66319a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontalCtrl: Horizontal_P3
+  verticalCtrl: Vertical_P3
+  fireButton: Fire1_P3

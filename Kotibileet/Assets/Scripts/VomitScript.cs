@@ -19,19 +19,19 @@ public class VomitScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey("space"))
+        //if (Input.GetKey("space"))
+        //{
+        //    puke();
+        //}
+
+        if (Input.GetKey(KeyCode.UpArrow))
         {
-            puke();
+            gameObject.transform.position = gameObject.transform.position + gameObject.transform.up * 0.1f;
         }
 
-        if(Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.DownArrow))
         {
-            gameObject.transform.position = gameObject.transform.position + gameObject.transform.up*0.1f;
-        }
-
-        if(Input.GetKey(KeyCode.DownArrow))
-        {
-            gameObject.transform.position = gameObject.transform.position + gameObject.transform.up*-0.1f;
+            gameObject.transform.position = gameObject.transform.position + gameObject.transform.up * -0.1f;
         }
 
 
