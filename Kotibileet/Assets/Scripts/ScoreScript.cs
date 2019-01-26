@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class ScoreScript : MonoBehaviour
 {
+
+   
+
     int player1Score, player2Score, player3Score, player4Score;
     public float timeLeft = 120;
     public Text timeText;
@@ -13,7 +16,7 @@ public class ScoreScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        DontDestroyOnLoad(this.gameObject);
     }
 
     // Update is called once per frame
@@ -31,6 +34,7 @@ public class ScoreScript : MonoBehaviour
         }
     }
 
+    
     public void AddScore(int playerNumber)
     {
         switch (playerNumber)
