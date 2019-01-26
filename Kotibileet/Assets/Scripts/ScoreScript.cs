@@ -6,30 +6,34 @@ using UnityEngine.UI;
 public class ScoreScript : MonoBehaviour
 {
     int player1Score, player2Score, player3Score, player4Score;
-    public float timeLeft=30;
+    public float timeLeft = 30;
     public Text timeText;
-    
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        timeLeft-=Time.deltaTime;
-        timeText.text=timeLeft.ToString();
-        if(timeLeft<0){
-            print("game over");
+        if (timeLeft > 0)
+        {
+            timeLeft -= Time.deltaTime;
+            timeText.text = ((int)timeLeft).ToString();
+        }
+        if (timeLeft < 0)
+        {
+            timeText.text = "Game over";
         }
     }
 
     public void AddScore(int playerNumber)
     {
-        switch(playerNumber)
+        switch (playerNumber)
         {
-            case 1 :
+            case 1:
                 player1Score++;
                 break;
             case 2:
@@ -41,7 +45,7 @@ public class ScoreScript : MonoBehaviour
             case 4:
                 player4Score++;
                 break;
-        }    
+        }
     }
 
     public void printScores()
