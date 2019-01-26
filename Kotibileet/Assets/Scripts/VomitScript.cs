@@ -56,7 +56,6 @@ public class VomitScript : MonoBehaviour
             //vomitParticle.GetComponent<Rigidbody2D>().velocity = new Vector3(15, Random.Range(-3, 3), 0);
             vomitParticle.GetComponent<VomitProjectileScript>().setOwner(playerNumber);
             vomitParticle.GetComponent<Rigidbody2D>().velocity = gameObject.transform.up * 15;
-            vomitParticle.GetComponent<VacuumScript>().attractedTo = GameObject.Find("Player");
             GetComponent<PlayerControl>().boozeCapacity--;
             GetComponent<PlayerControl>().boozeSlider.value--;
         }
@@ -67,6 +66,32 @@ public class VomitScript : MonoBehaviour
         horizontal *= .1f;
         vertical *= .1f;
         gameObject.transform.position = gameObject.transform.position + new Vector3(horizontal, vertical, 0);
+    }
+
+    public void turn(float v, float h)
+    {
+        if (v > 0)
+        {
+            gameObject.transform.position = gameObject.transform.position + gameObject.transform.up * v*0.1f;
+        }
+
+            if (v < 0)
+            {
+                gameObject.transform.position = gameObject.transform.position + gameObject.transform.up * v * 0.1f;
+            }
+
+
+            if (h < 0)
+            {
+                //gameObject.transform.position = gameObject.transform.position + new Vector3(-0.1f, 0, 0);
+                transform.Rotate(Vector3.forward * 250.0f * Time.deltaTime);
+            }
+
+            if (h > 0)
+            {
+                //gameObject.transform.position = gameObject.transform.position + new Vector3(0.1f, 0, 0);
+                transform.Rotate(Vector3.back * 250.0f * Time.deltaTime);
+            }
     }
 
 }

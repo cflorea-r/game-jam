@@ -44,6 +44,10 @@ public class PlayerControl : MonoBehaviour
         float h = Input.GetAxis(horizontalCtrl);
         // Cache the vertical input
         float v = Input.GetAxis(verticalCtrl);
-        GetComponent<VomitScript>().Move(h, v);
+        //GetComponent<VomitScript>().Move(h, v);
+
+        GetComponent<VomitScript>().turn(v, h);
+
+
     }
 }
