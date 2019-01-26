@@ -56,6 +56,19 @@ public class VomitScript : MonoBehaviour
             //vomitParticle.GetComponent<Rigidbody2D>().velocity = new Vector3(15, Random.Range(-3, 3), 0);
             vomitParticle.GetComponent<VomitProjectileScript>().setOwner(playerNumber);
             vomitParticle.GetComponent<Rigidbody2D>().velocity = gameObject.transform.up * 15;
+            switch(playerNumber)
+            {
+                case 2:
+                    vomitParticle.GetComponent<SpriteRenderer>().color = new Color(0.35f, 0.73f, 0.37f, 1.0f);
+                    break;
+                case 3:
+                    vomitParticle.GetComponent<SpriteRenderer>().color = new Color(0.73f, 0.4f, 0.35f, 1.0f);
+                    break;
+                case 4:
+                    vomitParticle.GetComponent<SpriteRenderer>().color = new Color(0.73f, 0.6f, 0.2f, 1.0f);
+                    break;
+            }
+            
             GetComponent<PlayerControl>().boozeCapacity--;
             GetComponent<PlayerControl>().boozeSlider.value--;
         }

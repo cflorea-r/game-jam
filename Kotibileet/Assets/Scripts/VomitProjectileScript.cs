@@ -19,7 +19,18 @@ public class VomitProjectileScript : MonoBehaviour
     private void OnDestroy()
     {
         Transform stain = Instantiate(stainPrefab, gameObject.transform.position, Quaternion.identity);
-
+        switch (owner)
+        {
+            case 2:
+                stain.GetComponent<SpriteRenderer>().color = new Color(0.35f, 0.73f, 0.37f, 1.0f);
+                break;
+            case 3:
+                stain.GetComponent<SpriteRenderer>().color = new Color(0.73f, 0.4f, 0.35f, 1.0f);
+                break;
+            case 4:
+                stain.GetComponent<SpriteRenderer>().color = new Color(0.73f, 0.6f, 0.2f, 1.0f);
+                break;
+        }
         scoreScript.AddScore(owner);
 
         scoreScript.printScores();
