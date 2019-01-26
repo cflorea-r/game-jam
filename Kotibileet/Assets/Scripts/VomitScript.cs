@@ -52,7 +52,7 @@ public class VomitScript : MonoBehaviour
     {
         if (GetComponent<PlayerControl>().boozeCapacity > 0)
         {
-            Transform vomitParticle = Instantiate(vomitPrefab, gameObject.transform.position, Quaternion.identity);
+            Transform vomitParticle = Instantiate(vomitPrefab, gameObject.transform.position + gameObject.transform.up * 0.2f, Quaternion.identity);
             //vomitParticle.GetComponent<Rigidbody2D>().velocity = new Vector3(15, Random.Range(-3, 3), 0);
             vomitParticle.GetComponent<VomitProjectileScript>().setOwner(playerNumber);
             vomitParticle.GetComponent<Rigidbody2D>().velocity = gameObject.transform.up * 15;
