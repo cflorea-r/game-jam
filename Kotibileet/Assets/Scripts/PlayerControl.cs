@@ -23,19 +23,34 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // If the fire button is pressed
-        if (Input.GetButton(fireButton))
+        if (playerNumber == 1)
         {
-            //print("Vomit or clean");
-            if (playerNumber == 1)
+            if (Input.GetButton(fireButton))
             {
                 VacuumScript.vacuuming = true;
             }
             else
             {
+                VacuumScript.vacuuming = false;
+            }
+        }
+        else
+        {
+            if (Input.GetButton(fireButton))
+            {
                 GetComponent<VomitScript>().puke(playerNumber);
             }
         }
+        /*
+        if(Input.GetKey("space"))
+        {
+            VacuumScript.vacuuming = true;
+        }
+        else
+        {
+            VacuumScript.vacuuming = false;
+        }
+        */
     }
 
     private void FixedUpdate()
