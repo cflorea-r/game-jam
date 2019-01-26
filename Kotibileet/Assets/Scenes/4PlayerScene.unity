@@ -1543,7 +1543,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.25, y: 1.25}
   m_EdgeRadius: 0
 --- !u!114 &757966483
 MonoBehaviour:
@@ -1661,6 +1661,7 @@ MonoBehaviour:
   fireButton: Fire1_P1
   boozeCapacity: 0
   boozeSlider: {fileID: 0}
+  move: 1
 --- !u!1 &772370935
 GameObject:
   m_ObjectHideFlags: 0
@@ -3127,7 +3128,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.05, y: 0.63}
   m_EdgeRadius: 0
 --- !u!114 &1434742799
 MonoBehaviour:
@@ -3245,6 +3246,7 @@ MonoBehaviour:
   fireButton: Fire1_P4
   boozeCapacity: 0
   boozeSlider: {fileID: 900260863}
+  move: 1
 --- !u!1 &1447519941
 GameObject:
   m_ObjectHideFlags: 0
@@ -3409,7 +3411,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.05, y: 0.63}
   m_EdgeRadius: 0
 --- !u!114 &1499313049
 MonoBehaviour:
@@ -3527,6 +3529,7 @@ MonoBehaviour:
   fireButton: Fire1_P2
   boozeCapacity: 0
   boozeSlider: {fileID: 1616328496}
+  move: 1
 --- !u!1 &1517684387
 GameObject:
   m_ObjectHideFlags: 0
@@ -4868,7 +4871,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.05, y: 0.63}
   m_EdgeRadius: 0
 --- !u!114 &1836082187
 MonoBehaviour:
@@ -4986,6 +4989,7 @@ MonoBehaviour:
   fireButton: Fire1_P3
   boozeCapacity: 0
   boozeSlider: {fileID: 1422224025}
+  move: 1
 --- !u!1 &1848787050
 GameObject:
   m_ObjectHideFlags: 0
