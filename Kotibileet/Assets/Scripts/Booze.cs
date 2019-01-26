@@ -26,8 +26,8 @@ public class Booze : MonoBehaviour
         //here add booze to player
         if (other.GetComponent<PlayerControl>().boozeCapacity < 200)
         {
-            other.GetComponent<PlayerControl>().boozeCapacity=+ 60;
-            other.GetComponent<PlayerControl>().boozeSlider.value=+60;
+            other.GetComponent<PlayerControl>().boozeCapacity += 60;
+            other.GetComponent<PlayerControl>().boozeSlider.value += 60;
         }
     }
 }
