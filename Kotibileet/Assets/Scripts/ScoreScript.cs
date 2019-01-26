@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScoreScript : MonoBehaviour
 {
     int player1Score, player2Score, player3Score, player4Score;
+    public float timeLeft=30;
+    public Text timeText;
     
     // Start is called before the first frame update
     void Start()
@@ -15,7 +18,11 @@ public class ScoreScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        timeLeft-=Time.deltaTime;
+        timeText.text=timeLeft.ToString();
+        if(timeLeft<0){
+            print("game over");
+        }
     }
 
     public void AddScore(int playerNumber)
