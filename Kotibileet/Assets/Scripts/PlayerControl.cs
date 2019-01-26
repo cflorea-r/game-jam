@@ -24,7 +24,7 @@ public class PlayerControl : MonoBehaviour
     void Update()
     {
         // If the fire button is pressed
-        if (Input.GetButtonDown(fireButton))
+        if (Input.GetButton(fireButton))
         {
             //print("Vomit or clean");
             if(playerNumber == 1)
