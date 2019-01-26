@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerControl : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class PlayerControl : MonoBehaviour
     public string horizontalCtrl = "Horizontal_P1";
     public string verticalCtrl = "Vertical_P1";
     public string fireButton = "Fire1_P1";
+
+    public int boozeCapacity = 0;
+    public Slider boozeSlider;
 
     // Start is called before the first frame update
     void Start()
