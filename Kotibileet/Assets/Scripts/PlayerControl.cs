@@ -64,9 +64,9 @@ public class PlayerControl : MonoBehaviour
         GetComponent<VomitScript>().turn(v, h);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if (playerNumber != 1 && other.GetComponent<PlayerControl>().playerNumber == 1)
+        if (playerNumber != 1 && other.gameObject.GetComponent<PlayerControl>() && other.gameObject.GetComponent<PlayerControl>().playerNumber == 1)
         {
             transform.position = new Vector3(0, 1, -1);
         }
