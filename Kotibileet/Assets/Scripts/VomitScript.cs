@@ -7,6 +7,7 @@ using UnityEngine;
 public class VomitScript : MonoBehaviour
 {
     public Transform vomitPrefab;
+    public float rotationSpeed = 100.0f;
 
 
     // Start is called before the first frame update
@@ -24,24 +25,26 @@ public class VomitScript : MonoBehaviour
         }
 
         if(Input.GetKey(KeyCode.UpArrow))
-        { 
-            gameObject.transform.position = gameObject.transform.position + new Vector3(0, 0.1f, 0);
+        {
+            gameObject.transform.position = gameObject.transform.position + gameObject.transform.up*0.1f;
         }
 
         if(Input.GetKey(KeyCode.DownArrow))
         {
-            gameObject.transform.position = gameObject.transform.position + new Vector3(0, -0.1f, 0);
+            gameObject.transform.position = gameObject.transform.position + gameObject.transform.up*-0.1f;
         }
 
 
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            gameObject.transform.position = gameObject.transform.position + new Vector3(-0.1f, 0, 0);
+            //gameObject.transform.position = gameObject.transform.position + new Vector3(-0.1f, 0, 0);
+            transform.Rotate(Vector3.back * 250.0f * Time.deltaTime);
         }
 
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            gameObject.transform.position = gameObject.transform.position + new Vector3(0.1f, 0, 0);
+            //gameObject.transform.position = gameObject.transform.position + new Vector3(0.1f, 0, 0);
+            transform.Rotate(Vector3.forward * 250.0f * Time.deltaTime);
         }
 
     }
@@ -49,8 +52,8 @@ public class VomitScript : MonoBehaviour
     public void puke()
     {
         Transform vomitParticle = Instantiate(vomitPrefab, gameObject.transform.position, Quaternion.identity);
-        vomitParticle.GetComponent<Rigidbody2D>().velocity = new Vector3(15, Random.Range(-3, 3), 0);
-        Debug.Log("Space pressed");
+        //vomitParticle.GetComponent<Rigidbody2D>().velocity = new Vector3(15, Random.Range(-3, 3), 0);
+        vomitParticle.GetComponent<Rigidbody2D>().velocity = gameObject.transform.up * 15;
     }
 
 }
