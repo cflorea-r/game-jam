@@ -6,6 +6,7 @@ public class VomitProjectileScript : MonoBehaviour
 {
     public Transform stainPrefab;
     public ScoreScript scoreScript;
+    int owner;
 
     public float lifeTime = 2f;
     // Start is called before the first frame update
@@ -18,9 +19,15 @@ public class VomitProjectileScript : MonoBehaviour
     private void OnDestroy()
     {
         Transform stain = Instantiate(stainPrefab, gameObject.transform.position, Quaternion.identity);
-        scoreScript.AddScore(1);
+
+        scoreScript.AddScore(owner);
 
         scoreScript.printScores();
+    }
+
+    public void setOwner(int playerNumber)
+    {
+        owner = playerNumber;
     }
 
     // Update is called once per frame

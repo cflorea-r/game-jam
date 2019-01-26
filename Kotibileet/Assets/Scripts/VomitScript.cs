@@ -9,7 +9,6 @@ public class VomitScript : MonoBehaviour
     public Transform vomitPrefab;
     public float rotationSpeed = 100.0f;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -49,10 +48,11 @@ public class VomitScript : MonoBehaviour
 
     }
 
-    public void puke()
+    public void puke(int playerNumber)
     {
         Transform vomitParticle = Instantiate(vomitPrefab, gameObject.transform.position, Quaternion.identity);
         //vomitParticle.GetComponent<Rigidbody2D>().velocity = new Vector3(15, Random.Range(-3, 3), 0);
+        vomitParticle.GetComponent<VomitProjectileScript>().setOwner(playerNumber);
         vomitParticle.GetComponent<Rigidbody2D>().velocity = gameObject.transform.up * 15;
     }
 

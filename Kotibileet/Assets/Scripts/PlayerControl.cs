@@ -23,7 +23,7 @@ public class PlayerControl : MonoBehaviour
         if (Input.GetButtonDown(fireButton))
         {
             //print("Vomit or clean");
-            GetComponent<VomitScript>().puke();
+            GetComponent<VomitScript>().puke(playerNumber);
         }
     }
 
