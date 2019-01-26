@@ -7,12 +7,18 @@ public class VacuumScript : MonoBehaviour
     GameObject attractedTo;
     float step = 0.2f;
     public static bool vacuuming;
+    int owner;
+
+    public ScoreScript scoreScript;
+
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        attractedTo = GameObject.Find("Player");
+        scoreScript = GameObject.Find("Score").GetComponent<ScoreScript>();
 
+        attractedTo = GameObject.Find("Player");
     }
 
     // Update is called once per frame
@@ -27,6 +33,11 @@ public class VacuumScript : MonoBehaviour
         }
     }
 
+    public void setOwner(int playerNumber)
+    {
+        owner = playerNumber;
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         
@@ -34,6 +45,7 @@ public class VacuumScript : MonoBehaviour
         {
             if (other.GetComponent<PlayerControl>().playerNumber == 1)
             {
+                scoreScript.ReduceScore(owner);
                 gameObject.SetActive(false);
             }
         }
