@@ -56,7 +56,7 @@ public class VomitScript : MonoBehaviour
             //vomitParticle.GetComponent<Rigidbody2D>().velocity = new Vector3(15, Random.Range(-3, 3), 0);
             vomitParticle.GetComponent<VomitProjectileScript>().setOwner(playerNumber);
             vomitParticle.GetComponent<Rigidbody2D>().velocity = gameObject.transform.up * 15;
-
+            vomitParticle.GetComponent<VacuumScript>().attractedTo = GameObject.Find("Player");
             GetComponent<PlayerControl>().boozeCapacity--;
             GetComponent<PlayerControl>().boozeSlider.value--;
         }
