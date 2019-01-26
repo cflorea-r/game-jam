@@ -18,8 +18,16 @@ public class Booze : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.GetComponent<PlayerControl>().playerNumber == 1)
+            return;
+
         Debug.Log("entered");
         gameObject.SetActive(false);
         //here add booze to player
+        if (other.GetComponent<PlayerControl>().boozeCapacity < 10)
+        {
+            other.GetComponent<PlayerControl>().boozeCapacity++;
+            other.GetComponent<PlayerControl>().boozeSlider.value++;
+        }
     }
 }

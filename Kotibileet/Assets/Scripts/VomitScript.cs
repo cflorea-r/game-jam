@@ -50,10 +50,16 @@ public class VomitScript : MonoBehaviour
 
     public void puke(int playerNumber)
     {
-        Transform vomitParticle = Instantiate(vomitPrefab, gameObject.transform.position, Quaternion.identity);
-        //vomitParticle.GetComponent<Rigidbody2D>().velocity = new Vector3(15, Random.Range(-3, 3), 0);
-        vomitParticle.GetComponent<VomitProjectileScript>().setOwner(playerNumber);
-        vomitParticle.GetComponent<Rigidbody2D>().velocity = gameObject.transform.up * 15;
+        if (GetComponent<PlayerControl>().boozeCapacity > 0)
+        {
+            Transform vomitParticle = Instantiate(vomitPrefab, gameObject.transform.position, Quaternion.identity);
+            //vomitParticle.GetComponent<Rigidbody2D>().velocity = new Vector3(15, Random.Range(-3, 3), 0);
+            vomitParticle.GetComponent<VomitProjectileScript>().setOwner(playerNumber);
+            vomitParticle.GetComponent<Rigidbody2D>().velocity = gameObject.transform.up * 15;
+
+            GetComponent<PlayerControl>().boozeCapacity--;
+            GetComponent<PlayerControl>().boozeSlider.value--;
+        }
     }
 
     public void Move(float horizontal, float vertical)
