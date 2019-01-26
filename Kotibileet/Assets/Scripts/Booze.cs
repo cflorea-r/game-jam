@@ -24,7 +24,7 @@ public class Booze : MonoBehaviour
         Debug.Log("entered");
         gameObject.SetActive(false);
         //here add booze to player
-        if (other.GetComponent<PlayerControl>().boozeCapacity < 120)
+        if (other.GetComponent<PlayerControl>().boozeCapacity < 200)
         {
             other.GetComponent<PlayerControl>().boozeCapacity=+ 60;
             other.GetComponent<PlayerControl>().boozeSlider.value=+60;
