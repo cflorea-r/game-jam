@@ -27,7 +27,7 @@ public class PlayerControl : MonoBehaviour
         if (Input.GetButton(fireButton))
         {
             //print("Vomit or clean");
-            if(playerNumber == 1)
+            if (playerNumber == 1)
             {
                 VacuumScript.vacuuming = true;
             }
@@ -47,7 +47,13 @@ public class PlayerControl : MonoBehaviour
         //GetComponent<VomitScript>().Move(h, v);
 
         GetComponent<VomitScript>().turn(v, h);
+    }
 
-
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (playerNumber != 1 && other.GetComponent<PlayerControl>().playerNumber == 1)
+        {
+            transform.position = new Vector3(0, 1, -1);
+        }
     }
 }
