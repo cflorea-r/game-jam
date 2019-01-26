@@ -14,6 +14,8 @@ public class PlayerControl : MonoBehaviour
     public int boozeCapacity = 0;
     public Slider boozeSlider;
 
+    public bool move = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -55,13 +57,16 @@ public class PlayerControl : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // Cache the horizontal input
-        float h = Input.GetAxis(horizontalCtrl);
-        // Cache the vertical input
-        float v = Input.GetAxis(verticalCtrl);
-        //GetComponent<VomitScript>().Move(h, v);
+        if (move)
+        {
+            // Cache the horizontal input
+            float h = Input.GetAxis(horizontalCtrl);
+            // Cache the vertical input
+            float v = Input.GetAxis(verticalCtrl);
+            //GetComponent<VomitScript>().Move(h, v);
 
-        GetComponent<VomitScript>().turn(v, h);
+            GetComponent<VomitScript>().turn(v, h);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -69,6 +74,13 @@ public class PlayerControl : MonoBehaviour
         if (playerNumber != 1 && other.gameObject.GetComponent<PlayerControl>() && other.gameObject.GetComponent<PlayerControl>().playerNumber == 1)
         {
             transform.position = new Vector3(0, 1, -1);
+            move = false;
+            Invoke("ActivateMove", 3);
         }
+    }
+
+    public void ActivateMove()
+    {
+        move = true;
     }
 }
