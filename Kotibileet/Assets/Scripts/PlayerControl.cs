@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerControl : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class PlayerControl : MonoBehaviour
     public string horizontalCtrl = "Horizontal_P1";
     public string verticalCtrl = "Vertical_P1";
     public string fireButton = "Fire1_P1";
+
+    public int boozeCapacity = 0;
+    public Slider boozeSlider;
 
     // Start is called before the first frame update
     void Start()
@@ -19,12 +23,34 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // If the fire button is pressed
-        if (Input.GetButtonDown(fireButton))
+        if (playerNumber == 1)
         {
-            //print("Vomit or clean");
-            GetComponent<VomitScript>().puke(playerNumber);
+            if (Input.GetButton(fireButton))
+            {
+                VacuumScript.vacuuming = true;
+            }
+            else
+            {
+                VacuumScript.vacuuming = false;
+            }
         }
+        else
+        {
+            if (Input.GetButton(fireButton))
+            {
+                GetComponent<VomitScript>().puke(playerNumber);
+            }
+        }
+        /*
+        if(Input.GetKey("space"))
+        {
+            VacuumScript.vacuuming = true;
+        }
+        else
+        {
+            VacuumScript.vacuuming = false;
+        }
+        */
     }
 
     private void FixedUpdate()
@@ -33,6 +59,16 @@ public class PlayerControl : MonoBehaviour
         float h = Input.GetAxis(horizontalCtrl);
         // Cache the vertical input
         float v = Input.GetAxis(verticalCtrl);
-        GetComponent<VomitScript>().Move(h, v);
+        //GetComponent<VomitScript>().Move(h, v);
+
+        GetComponent<VomitScript>().turn(v, h);
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (playerNumber != 1 && other.gameObject.GetComponent<PlayerControl>() && other.gameObject.GetComponent<PlayerControl>().playerNumber == 1)
+        {
+            transform.position = new Vector3(0, 1, -1);
+        }
     }
 }
