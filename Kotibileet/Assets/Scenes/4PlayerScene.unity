@@ -2422,7 +2422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cd780138f3779e409b9a758a13008d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLeft: 30
+  timeLeft: 120
   timeText: {fileID: 2006695514}
 --- !u!4 &1045253405
 Transform:
@@ -5872,7 +5872,7 @@ Transform:
   - {fileID: 1848787051}
   - {fileID: 983735573}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2006695512
 GameObject:

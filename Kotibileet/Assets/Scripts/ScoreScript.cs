@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ScoreScript : MonoBehaviour
 {
     int player1Score, player2Score, player3Score, player4Score;
-    public float timeLeft = 30;
+    public float timeLeft = 120;
     public Text timeText;
 
     // Start is called before the first frame update
@@ -26,6 +27,7 @@ public class ScoreScript : MonoBehaviour
         if (timeLeft < 0)
         {
             timeText.text = "Game over";
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 
