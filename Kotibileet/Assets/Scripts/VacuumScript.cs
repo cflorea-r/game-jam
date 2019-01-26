@@ -20,7 +20,10 @@ public class VacuumScript : MonoBehaviour
     {
         if(vacuuming == true)
         {
-            transform.position = Vector3.MoveTowards(transform.position, attractedTo.transform.position, step);
+            if(Vector3.Distance(attractedTo.transform.position, transform.position) <= 3)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, attractedTo.transform.position, step);
+            }
         }
     }
 }
