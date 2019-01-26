@@ -16,6 +16,8 @@ public class PlayerControl : MonoBehaviour
 
     public bool move = true;
 
+    public GameObject poof;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -76,10 +78,33 @@ public class PlayerControl : MonoBehaviour
     {
         if (playerNumber != 1 && other.gameObject.GetComponent<PlayerControl>() && other.gameObject.GetComponent<PlayerControl>().playerNumber == 1)
         {
-            transform.position = new Vector3(0, 1, -1);
-            move = false;
-            Invoke("ActivateMove", 3);
+            //GameObject poofClone = Instantiate(poof, transform.position, Quaternion.identity);
+            //transform.position = new Vector3(0, 1, -1);
+            ////poofClone.transform.position = transform.position;
+            //move = false;
+            //Invoke("ActivateMove", 3);
+            StartCoroutine(TeleportPlayerToToilet());
         }
+    }
+
+    public IEnumerator TeleportPlayerToToilet()
+    {
+        move = false;
+
+        GameObject poofClone = Instantiate(poof, transform.position, Quaternion.identity);
+
+        yield return new WaitForSeconds(.5f);
+
+        transform.position = new Vector3(0, 1, -1);
+        GameObject poofClone2 = Instantiate(poof, transform.position, Quaternion.identity);
+        Destroy(poofClone);
+
+        yield return new WaitForSeconds(.5f);
+
+        Destroy(poofClone2);
+
+        Invoke("ActivateMove", 3);
+
     }
 
     public void ActivateMove()
