@@ -46,6 +46,7 @@ public class VacuumScript : MonoBehaviour
             if (other.GetComponent<PlayerControl>().playerNumber == 1)
             {
                 scoreScript.ReduceScore(owner);
+                scoreScript.AddScore(1);
                 gameObject.SetActive(false);
             }
         }

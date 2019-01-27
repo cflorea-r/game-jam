@@ -12,7 +12,9 @@ public class VomitProjectileScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         scoreScript = GameObject.Find("Score").GetComponent<ScoreScript>();
+        scoreScript.resetScore();
         Destroy(gameObject, lifeTime);
     }
 
@@ -34,6 +36,7 @@ public class VomitProjectileScript : MonoBehaviour
         stain.GetComponent<VacuumScript>().setOwner(owner);
         
         scoreScript.AddScore(owner);
+        scoreScript.ReduceScore(1);
 
         //scoreScript.printScores();
     }
