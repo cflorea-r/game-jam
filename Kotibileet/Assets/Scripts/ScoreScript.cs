@@ -73,7 +73,7 @@ public class ScoreScript : MonoBehaviour
 
     public void resetScore()
     {
-        player1Score = 1000;
+        player1Score = 500;
         player2Score = 0;
         player3Score = 0;
         player4Score = 0;

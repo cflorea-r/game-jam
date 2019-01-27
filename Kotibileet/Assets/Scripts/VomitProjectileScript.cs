@@ -14,7 +14,6 @@ public class VomitProjectileScript : MonoBehaviour
     {
 
         scoreScript = GameObject.Find("Score").GetComponent<ScoreScript>();
-        scoreScript.resetScore();
         Destroy(gameObject, lifeTime);
     }
 
