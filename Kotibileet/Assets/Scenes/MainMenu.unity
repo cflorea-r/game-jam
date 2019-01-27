@@ -1066,7 +1066,7 @@ RectTransform:
   m_GameObject: {fileID: 1160784901}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.7, y: 1.7, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1245463233}
   - {fileID: 1336918488}
@@ -1076,7 +1076,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 288, y: 297}
+  m_AnchoredPosition: {x: 308, y: 173.25}
   m_SizeDelta: {x: 333.2, y: 346.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1160784903
@@ -1349,7 +1349,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -23.15, y: 37}
+  m_AnchoredPosition: {x: -23.149994, y: 37}
   m_SizeDelta: {x: -145.8, y: -256.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1255345822
@@ -1466,8 +1466,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: ead2a7a7b369eab47a3ef209c397644f, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1837,8 +1837,8 @@ Canvas:
   m_GameObject: {fileID: 1693414832}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 2
+  m_Camera: {fileID: 354787319}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1857,8 +1857,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1693414832}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 90}
+  m_LocalScale: {x: 0.019900497, y: 0.019900497, z: 0.019900497}
   m_Children:
   - {fileID: 1334816141}
   - {fileID: 1160784902}
@@ -1870,8 +1870,8 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
+  m_SizeDelta: {x: 893.00006, y: 502.5}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1820696737
 GameObject:
   m_ObjectHideFlags: 0
