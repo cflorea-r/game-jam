@@ -38,18 +38,22 @@ public class victoryScript : MonoBehaviour
         if(scores[3] == scoreScript.player1Score)
         {
             winner.text = "Player1 Wins";
+            winner.color = Color.white;
         }
         else if (scores[3] == scoreScript.player2Score)
         {
             winner.text = "Player2 Wins";
+            winner.color = Color.green;
         }
         else if (scores[3] == scoreScript.player3Score)
         {
             winner.text = "Player3 Wins";
+            winner.color = Color.red;
         }
         else if (scores[3] == scoreScript.player3Score)
         {
             winner.text = "Player4 Wins";
+            winner.color = Color.yellow;
         }
 
 
