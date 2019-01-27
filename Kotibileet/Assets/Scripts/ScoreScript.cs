@@ -9,7 +9,7 @@ public class ScoreScript : MonoBehaviour
 
    
 
-    int player1Score, player2Score, player3Score, player4Score;
+    public int player1Score, player2Score, player3Score, player4Score;
     public float timeLeft = 120;
     public Text timeText;
 
