@@ -18,10 +18,12 @@ public class PlayerControl : MonoBehaviour
 
     public GameObject poof;
 
+    AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        audioSource = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -40,8 +42,13 @@ public class PlayerControl : MonoBehaviour
         }
         else
         {
+            if(Input.GetButtonDown(fireButton))
+            {
+                audioSource.Play();
+            }
             if (Input.GetButton(fireButton))
             {
+                
                 GetComponent<VomitScript>().puke(playerNumber);
             }
         }
