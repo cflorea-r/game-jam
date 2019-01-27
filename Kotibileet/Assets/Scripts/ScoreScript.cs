@@ -10,7 +10,7 @@ public class ScoreScript : MonoBehaviour
    
 
     public int player1Score, player2Score, player3Score, player4Score;
-    public float timeLeft = 120;
+    public float timeLeft = 20;
     public Text timeText;
 
     // Start is called before the first frame update
@@ -30,7 +30,7 @@ public class ScoreScript : MonoBehaviour
         if (timeLeft < 0)
         {
             timeText.text = "Game over";
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene(2);
         }
     }
 

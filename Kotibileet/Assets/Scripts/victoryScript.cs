@@ -33,19 +33,21 @@ public class victoryScript : MonoBehaviour
 
         scores.Sort();
 
-        if(scores[0] == scoreScript.player1Score)
+        Debug.Log("winning score: " + scores[3]);
+
+        if(scores[3] == scoreScript.player1Score)
         {
             winner.text = "Player1 Wins";
         }
-        else if (scores[0] == scoreScript.player2Score)
+        else if (scores[3] == scoreScript.player2Score)
         {
             winner.text = "Player2 Wins";
         }
-        else if (scores[0] == scoreScript.player3Score)
+        else if (scores[3] == scoreScript.player3Score)
         {
             winner.text = "Player3 Wins";
         }
-        else if (scores[0] == scoreScript.player3Score)
+        else if (scores[3] == scoreScript.player3Score)
         {
             winner.text = "Player4 Wins";
         }

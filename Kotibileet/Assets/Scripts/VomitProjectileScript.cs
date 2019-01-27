@@ -35,7 +35,7 @@ public class VomitProjectileScript : MonoBehaviour
         
         scoreScript.AddScore(owner);
 
-        scoreScript.printScores();
+        //scoreScript.printScores();
     }
 
     public void setOwner(int playerNumber)
